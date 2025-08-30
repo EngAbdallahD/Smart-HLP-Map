@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
         mapDisplay.innerHTML = `<p class="p-8 text-center text-gray-500">Loading map for ${mapName.replace('_', ' ')}...</p>`;
 
         try {
-            // This is the line we fixed for GitHub
-            const response = await fetch(`./maps/${mapName}.svg`); 
+            // This line is now corrected to use "Maps" with a capital M
+            const response = await fetch(`./Maps/${mapName}.svg`); 
             if (!response.ok) {
                 throw new Error(`Map not found: ${mapName}.svg. Please check the file name and path.`);
             }
