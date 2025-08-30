@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mapDisplay.innerHTML = `<p class="p-8 text-center text-gray-500">Loading map for ${mapName.replace('_', ' ')}...</p>`;
 
         try {
-            const response = await fetch(`maps/${mapName}.svg`);
+            const response = await fetch(`./maps/${mapName}.svg`);
             if (!response.ok) {
                 throw new Error(`Map not found: ${mapName}.svg. Please check the file name and path.`);
             }
@@ -58,4 +58,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     initialize();
+
 });
